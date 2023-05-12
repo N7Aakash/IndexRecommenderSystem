@@ -23,6 +23,7 @@ class db{
     
 
     private static int SELECT_COUNT = 3;
+    private static int SELECT_COUNT_THRESHOLD = 5;
     private static int NORMAL_QUERY_COLUMN_THRESHOLD = 10;
     private static int PRIORITY_QUERY_COLUMN_THRESHOLD = 5;
     static ArrayList<String> columnType = new ArrayList<>();
@@ -219,7 +220,7 @@ class db{
         
         
         
-        if(SELECT_COUNT>5){
+        if(SELECT_COUNT>SELECT_COUNT_THRESHOLD){
 
             //This will get all the current indexes info basically table map with it's indexes in the form 1a,2d,3a  ,  1a, 2a to see if the new index should be created or not. 
             Map<String, List<String>> indexesByTable = new HashMap<>();
