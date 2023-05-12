@@ -1,5 +1,7 @@
 Run the following commands to run the project:
-javac db.java 
+
+javac db.java
+
 java db input.txt
 
 Contribution:
